@@ -1,3 +1,4 @@
+import Grid from './components.js/Grid/Grid';
 import Hero from './components.js/Hero/Hero';
 import Navbar from './components.js/Navbar/Navbar';
 
@@ -13,6 +14,7 @@ function App() {
      {/* <h1>Rita we need to get to work</h1> */}
      <Navbar /> 
      <Hero />
+     <Grid />
     </div>
   );
 }
