@@ -1,4 +1,6 @@
-import Navbar from './components.js/Navbar';
+import Hero from './components.js/Hero/Hero';
+import Navbar from './components.js/Navbar/Navbar';
+
 import './index.css';
 
 function App() {
@@ -10,6 +12,7 @@ function App() {
     <div className="App">
      {/* <h1>Rita we need to get to work</h1> */}
      <Navbar /> 
+     <Hero />
     </div>
   );
 }
