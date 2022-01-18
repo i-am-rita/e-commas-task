@@ -1,5 +1,6 @@
 import React from 'react'
 import heroImage from '../../images/heroimg.png'
+import bag from '../../images/blackbag.png'
 import './Hero.css'
 
 export default function Hero() {
@@ -15,14 +16,17 @@ export default function Hero() {
             </div>
             <div className='cards'>
                 <div className='card'>
+                <img src={bag} alt='black bag' />
                 <h2>item</h2>
                 <p>price</p>
                 </div>
                 <div className='card'>
+                <img src={bag} alt='black bag' />
                 <h2>item</h2>
                 <p>price</p>
                 </div>
                 <div className='card'>
+                <img src={bag} alt='black bag' />
                 <h2>item</h2>
                 <p>price</p>
                 </div>

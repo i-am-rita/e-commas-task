@@ -1,4 +1,4 @@
-import Grid from './components.js/Grid/Grid';
+import Grid from './components.js/Grid/Container2';
 import Hero from './components.js/Hero/Hero';
 import Navbar from './components.js/Navbar/Navbar';
 
