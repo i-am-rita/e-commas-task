@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Container2.css'
 import sneaker1 from '../../images/sneaker1.png'
 import brownbag from '../../images/brown-bag.png'
@@ -19,7 +19,7 @@ export default function Grid() {
         },
 
         {
-            img: sneaker1,
+            img: brownbag,
             title: 'Nike Max Air 270 React',
             price1: '$299,43',
             price2: '534,33',
@@ -27,7 +27,7 @@ export default function Grid() {
         },
 
         {
-            img: sneaker1,
+            img: strapbag,
             title: 'Nike 270 Air Max React',
             price1: '$299,43',
             price2: '534,33',
@@ -35,7 +35,7 @@ export default function Grid() {
         },
 
         {
-            img: sneaker1,
+            img: addidas,
             title: '270 Nike Air Max React',
             price1: '$299,43',
             price2: '534,33',
@@ -43,7 +43,7 @@ export default function Grid() {
         },
         
         {
-            img: sneaker1,
+            img: shoesole,
             title: 'React 270 Nike Air Max',
             price1: '$299,43',
             price2: '534,33',
@@ -51,7 +51,7 @@ export default function Grid() {
         },
 
         {
-            img: sneaker1,
+            img: yellblack,
             title: 'Air React 270 Nike Max',
             price1: '$299,43',
             price2: '534,33',
@@ -59,7 +59,7 @@ export default function Grid() {
         },
 
         {
-            img: sneaker1,
+            img: reactshoe,
             title: 'Nike React 270  Air Max',
             price1: '$299,43',
             price2: '534,33',
@@ -67,15 +67,23 @@ export default function Grid() {
         },
 
         {
-            img: sneaker1,
+            img: addidas,
             title: 'Rita 270 Nike Air Max',
             price1: '$299,43',
             price2: '534,33',
             price3: '24% Off'
         },
        ]
+
+       const [show, setShow] = useState('')
+
+    //    Here, I am using index to pick each item so that onMouseEnter of each item, just that item will be active.
+
+    //    function handleMouseEnter(event){
+    //        setShow(true)
+    //    }
     return (
-        <div>
+        <div className='detail'>
         <h1>Best Seller</h1>
         <div className='details'> 
             <ul>
@@ -87,42 +95,44 @@ export default function Grid() {
             </ul>
             </div>
 
+            <div className='container'>
+                {data.map((item, i) => {
+                    return(
+                        <>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div className='container'>
-            {/* <div className='cards'> */}
-                <div className='items'>
-                <img src={data.img} />
-                <div className='item'>
-                    <h3>{data.title}</h3>
-                    <p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    </p>
-                    <p>{data.price1}<small>{data.price2}</small> <span>{data.price3}</span></p>
+                        <div className='items' key={item.img}
+                     onMouseEnter={() => setShow(i)}
+                     onMouseLeave={() => setShow('')}
+                        >
+                        {show === i && <div className='image' >
+                <div className='image-overlay'>
+                    <h1 image-description>
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    </h1>
                 </div>
-                </div>
-        </div>
-        </div>
+            </div> } 
+                        <img src={item.img} alt='' 
+                               
+                        />
+                        <div className='item'>
+                            <h3>{item.title}</h3>
+                            <p> <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </p> 
+                            <p>{item.price1} <small>{item.price2}</small> <span>{item.price3}</span></p>
+                        </div>
+                        </div>
+                        </>
+                    )
+                })}
+            </div>  
+            <h2><a href='#load'>load more</a></h2>
+            </div>
     )
 }
+
+

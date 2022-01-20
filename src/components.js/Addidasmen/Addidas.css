@@ -1,0 +1,40 @@
+.addidas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #40BFFF;
+    width: 100%;
+    height: 100%;
+    padding: 100px 99px;
+    margin-top: 90px;
+}
+
+.addidas h2{
+    font-family: 'Poppins' sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 45px;
+line-height: 72px;
+margin-bottom: -10px;
+color: #FFFFFF;
+}
+
+.addidas h4{
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.addidas p{
+    text-transform: uppercase;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: .9em;
+
+color: #FFFFFF;
+}
+
+.addidas img{
+    height: 75%;
+    position: absolute;
+    margin-top: -200px;
+}
