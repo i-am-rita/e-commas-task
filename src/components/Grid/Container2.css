@@ -48,6 +48,8 @@ h2 a{
     justify-content: center;
     align-items: center;
     padding: 0px 99px;
+    cursor: pointer;
+
 }
 
 

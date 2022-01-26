@@ -15,18 +15,19 @@ export default function Latest() {
         {
             img: figma,
             date: '01 Jan 2015',
-            title: 'Fashion Industry',
+            title: 'Best Design Tools',
             descr: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         },
         {
             img: kronoslogo,
             date: '01 Jan 2015',
-            title: 'Fashion Industry',
+            title: 'HR Community',
             descr: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         }
     ]
     return (
         <>
+        <h1 className='htag'>Latest News</h1>
             <div className='Kontainer'>
 
         {latest.map(late => {

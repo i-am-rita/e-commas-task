@@ -123,7 +123,7 @@ export default function Grid() {
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </p> 
-                            <p>{item.price1} <small>{item.price2}</small> <span>{item.price3}</span></p>
+                            <p>{item.price1} <s>{item.price2}</s> <span>{item.price3}</span></p>
                         </div>
                         </div>
                         </>

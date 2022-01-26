@@ -1,11 +1,7 @@
-import Addidas from './components.js/Addidasmen/Addidas';
-import Grid from './components.js/Grid/Container2';
-import Hero from './components.js/Hero/Hero';
-import Navbar from './components.js/Navbar/Navbar';
-import Services from './components.js/Services/Services';
-import Latest from './components.js/Latest/Latest'
-
+import Navbar from './components/Navbar/Navbar';
 import './index.css';
+import Footer from './components/Footer/Footer';
+import Home from './Pages/Home'
 
 function App() {
   // const name = () => {
@@ -16,11 +12,8 @@ function App() {
     <div className="App">
      {/* <h1>Rita we need to get to work</h1> */}
      <Navbar /> 
-     <Hero />
-     <Grid />
-     <Addidas/>
-     <Services />
-     <Latest />
+     <Home />
+     <Footer/> 
     </div>
   );
 }

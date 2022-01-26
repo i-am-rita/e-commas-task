@@ -1,0 +1,103 @@
+.Chontainer{
+    /* border: 10px solid greenyellow; */
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.Chontainer img{
+    /* border: 3px solid red; */
+    width: 250px;
+    margin-left: 50px;
+    
+    /* padding: 20px; */
+}
+
+.Chontainer .Chontains{
+    padding: 70px 45px;
+    margin-bottom: 70px;
+    margin-left: 30px;
+}
+.htagg{
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: -4%;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins' sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 51px;
+    color: #22262A;
+}
+.Chontainer .Chontains s{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 13px;
+    line-height: 1px;
+    color: #C1C8CE;
+    /* padding: 0px 30px 0px 30px; */
+}
+
+.Chontainer .Chontains h3{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    /* line-height: 1px; */
+    color: #262626;
+    white-space: normal;
+    width: 120%;
+}
+
+
+.Chontainer .Chontains p i{
+     word-spacing: 300px;
+     width: 13%;  
+     color: #FFC600; 
+     font-size: 10px;
+    line-height: 5px;
+}
+
+span{
+    color: #FF4858;
+    font-weight: 500;
+}
+
+.butto{
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #BCDDFE;
+    margin-bottom:50px;
+
+}
+
+.butto input{
+    width: 30%;
+    height: 30%;
+    padding: 15px;
+    margin: 20px;
+    border: 2px solid #BCDDFE;
+    border-radius: 3px;
+   /* color: #BCDDFE; */
+
+}
+
+.butto button{
+    width: 6%;
+    padding: 15.5px;
+    position: relative;
+    left: -108px;
+    background-color:#40BFFF;
+    border: none;
+    color: #ffffff;
+    /* border-radius: 3px; */
+    /* color: #BCDDFE; */
+
+    /* margin-right: 20%; */
+}
