@@ -4,7 +4,6 @@ import Hero from '../components/Hero/Hero';
 import Services from '../components/Services/Services';
 import Latest from '../components/Latest/Latest'
 import Featured from '../components/Featured/Featured';
-
 import React from 'react'
 
 export default function Home() {

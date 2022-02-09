@@ -1,0 +1,220 @@
+.conthainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 90px;
+
+}
+
+/* .image-section{ */
+    /* display: flex; */
+    /* flex: 2; */
+    /* background-color: green; */
+    /* margin: -40px 50px; */
+   
+/* } */
+
+ .main-image{
+    display: flex;
+    width: 320px;
+    /* margin-top: -20px; */
+    /* margin-bottom: -100px; */
+}
+
+.image-section .side-image{
+    display: flex;
+    /* background-color: blue; */
+    width: 80px;
+    /* margin: 0px 40px; */
+    margin-top: 90px;
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+}
+
+.detail-section{
+    flex: 3;
+    /* display: flex; */
+    padding: 0px 30px;
+}
+
+ .review{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    align-items: center;
+}
+.detail-section h1{
+    color: #22262A;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.review {
+    color: #FFC600;
+    letter-spacing: 5px;
+    font-size: 14px;
+    /* margin: 50px; */
+    /* width: 20px/; */
+}
+.detail-section .odd{
+    font-family: Proxima Nova;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+color: #C1C8CE;
+}
+
+.detail-section .even{
+    font-family: Proxima Nova;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+
+color: #33A0FF;
+}
+.hr{
+    background-color: #F6F7F8;    
+    margin-left: -2px;
+    height: 2.12px;
+    width: 95%;
+    position: relative;
+    top: -20px;
+}
+
+.detail-section .blue{
+display: flex;
+margin-top: -35px;
+justify-content: space-between;
+width: 55%;
+}
+
+.blue .available{
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 21px;
+color: #262626;
+padding: 0px 15px 0px 15px ;
+display: flex;
+/* position: relative; */
+justify-content: space-between;
+}
+
+.detail-section .blue p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 180%;
+    letter-spacing: 0.5px;
+    color: #40BFFF;
+}
+
+.detail-section .blue s{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 150%;
+letter-spacing: 0.5px;
+text-decoration-line: line-through;
+color: #9098B1;
+}
+
+.detail-section .blue span{
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 150%;
+letter-spacing: 0.5px;
+color: #FB7181;
+}
+
+.but{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+  }
+
+
+
+.detail-section .social-links{
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+    height: 50px;
+    /* background-color: #385C8E; */
+
+}
+
+.product-inform{
+    background-color: #FAFAFB;;
+    padding: 50px;
+    margin: 35px 50px;
+}
+.product-inform ul  {
+    display: flex;
+    justify-content: space-around;
+    width:40%;
+    padding-top: -5px;
+    padding-bottom: 20px;
+    margin-left: -55px;
+}
+
+.product-inform ul li{
+    list-style: none;
+}
+
+.product-inform ul li a{
+    text-decoration: none;
+    color: #262626;
+}
+
+ .product-inform p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 180%;
+    letter-spacing: 0.5px;
+    color: #9098B1;
+    /* margin: 50px; */
+    /* padding: 50px; */
+ }
+
+ .product-contahiner{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0 0 50px;
+    cursor: pointer;
+ }
+
+ .product-cont h1{
+     /* display: flex; */
+     align-items: center;
+     text-align: center;
+     text-transform: uppercase;
+     padding: 40px;
+     color: #22262A;
+ }

@@ -21,6 +21,7 @@ color: #FFFFFF;
 .addidas h4{
     font-weight: normal;
     color: #FFFFFF;
+    width: 100%;
 }
 
 .addidas p{
@@ -34,7 +35,8 @@ color: #FFFFFF;
 }
 
 .addidas img{
-    height: 75%;
+    height: 60%;
     position: absolute;
     margin-top: -200px;
+    width: 40%;
 }
