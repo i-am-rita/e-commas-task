@@ -4,24 +4,34 @@ import React, { useState, useEffect } from 'react'
 // import data from '../../Data';
 import './Container2.css'
 import ProductItem from '../ProductItem'
+import { useDispatch, useSelector } from 'react-redux'
+import {  showAllProducts } from '../../reduxx/Shopping/shopping-actions'
+
 
 export default function Grid() {
     const [show, setShow] = useState('')
-    const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
+    // const dispatch = useDispatch()
+    // const products = useSelector(state => state.shop.products)
 
+    const dispatch = useDispatch()
+    const products = useSelector(state => state.shop.products)
+    // const {id} = products
     function getData() {
         setLoading(true)
         fetch('https://fakestoreapi.com/products/')
             .then((res) => res.json())
-            .then(data => setData(data))
+            .then(data => {
+                dispatch(showAllProducts(data))
+                // dispatch(addAllProducts(data))
+            })
             .catch((err) => console.log('error'))
             .finally(() => setLoading(false))
     }
 
     useEffect(() => {
         getData()
-    }, [])
+    },[])
 
     if (loading) {
         return 'Loading...'
@@ -40,21 +50,24 @@ export default function Grid() {
                         <li> <a href='#home'>Sunglasses</a></li>
                     </ul>
                 </div>
-                <div className="container" key={data.id}>
-                    {data.slice(1, 9).map((item, i) => {
+                <div className="container">
+                {/* <Link to={`products/${id}`}> */}
+                    {products.map((item, i) => {
                         return (
-                            <>
-                                <ProductItem
-                                    item={item}
-                                    i={i}
-                                    show={show}
-                                    setShow={setShow}
-                                />
-                            </>
+
+                            <ProductItem
+                                item={item}
+                                i={i}
+                                show={show}
+                                setShow={setShow}
+                                key={item.id}
+                            />
+
                         )
                     })}
+                    {/* </Link> */}
                 </div>
-                <h2><a href='#load'>load more</a></h2>
+                {/* <h2><a href='#load'>load more</a></h2> */}
             </div>
         </>
     )

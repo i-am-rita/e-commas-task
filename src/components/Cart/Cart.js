@@ -1,15 +1,35 @@
-// import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import ProductItem from '../ProductItem';
-// import data from '../../Data';
+
 import './Cart.css';
-import brownbag from '../../images/brown-bag.png'
-// import ProductItem from '../ProductItem';
+// import brownbag from '../../images/brown-bag.png'
+import { useSelector, useDispatch} from 'react-redux'
+// import { increaseQuantity } from '../../reduxx/Shopping/shopping-actions';
+import {  addToCart } from '../../reduxx/Shopping/shopping-actions';
+import { removeFromCart } from '../../reduxx/Shopping/shopping-actions';
+// import { addToCart } from '../reduxx/Shopping/shopping-actions';
+// import { useState } from 'react';
+// import Modaal from './MyModaal'
 // import { useState } from 'react';
 
-export default function Cart(props) {
+export default function Cart({props} ) {
+    const cartItems = useSelector(state => state.shop.cart)
+    // const [state, setState] = useState(0)
+    const dispatch = useDispatch()
+    // const [openModal, setOpenModal] = useState(false)
     // const [show, setShow] = useState
     // const [cartItems, setCartItems] = useState([])
+    // console.log(cartItems);
+// let itemQty = document.getElement'item.qty'
+// if (clicks === 0){
+//  IncrementItem=()=>{
+//     this.setState({ clicks: this.state.clicks + 1 });
+//   }
+// }
+    // let prod = 0
+    // function increment() {
+    //     prod = prod + 1
+
+    //     console.log(prod)
+    // }
     return <>
 
         <button className='buttondeal'>
@@ -24,41 +44,56 @@ export default function Cart(props) {
         </div>
         <hr className='hr' />
 
+       
 
         <div className='first-item'>
-            <div className='b'>
+        {cartItems.map((item) => {
+            return(
+                <>
+                <div className='b'>
                 <i class="fas fa-star"></i>
-                <img src={brownbag} alt='' />
-                <p>Nike AirMax 270 React</p>
+                <img src={item.image} alt='' />
+                <p>{item.title}</p>
+               
             </div>
+              <div className='second-item'>
 
-            <div className='second-item'>
-                <p>$998</p>
-                <p>button</p>
-                {/* <button>- 2 +</button> */}
-                <p>$499</p>
+                <p>${item.price * item.qty}</p>
+                <div className="add_remove">
+                  <div
+                    className="minus_button"
+                    onClick={() => dispatch(removeFromCart(cartItems))}
+                  >
+                    -
+                  </div>
+                  <span>{item.qty}</span>
+                  <div
+                    className="add_button"
+                    // onClick={this.IncrementItem}
+                    // onClick={() => increaseItem(item)}
+                    onClick={() => dispatch(addToCart(cartItems))}
+                  >
+                    +
+                  </div>
+                </div>
+                <p>${item.price}</p>
+                {/* <p>${item.price}</p> */}
             </div>
+            </>
+            )
+        })}
         </div>
+
         <hr className='hr' />
-        <div className='first-item'>
-            <div className='b'>
-                <i class="fas fa-star"></i>
-                <img src={brownbag} alt='' />
-                <p>Nike AirMax 270 React</p>
-            </div>
-
-            <div className='second-item'>
-                <p>$998</p>
-                <p>button</p>
-                {/* <button>- 2 +</button> */}
-                <p>$499</p>
-            </div>
-        </div>
         <hr className='hr' />
         <div className='checkout-item'>
             <div className='voucher-button'>
                 <input type='search' placeholder='Voucher Code' />
-                <button>Redeem</button>
+                <button
+                // onClick={()=>{
+                //     setOpenModal(true)
+                // }}
+                >Redeem</button>
             </div>
 
             <div className='checking'>
@@ -83,29 +118,8 @@ export default function Cart(props) {
                 <button className='redeem-button'>Redeem</button>
                 {/* </div> */}
             </div>
-
         </div>
-
-
-        {/* </div> */}
-
-
-        {/* <h1>Cart Details</h1>
-      {cartItems.length === 0 && (
-          <div className='empty-cart'>
-          <h2>bhbj</h2>
-          </div> 
-      )}
-      <div>
-          {cartItems.map((item) => (
-              <div key={item.id} className='cart-item-list'>
-                   <img className='cart-item-image' alt=''
-                       src={item.img}
-                   />
-              </div>
-          ))}
-      </div> */}
-        {/* </div> */}
-
+        {/* <Modaal open={openModal}/> */}
     </>
-}
+
+    }

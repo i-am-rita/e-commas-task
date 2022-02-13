@@ -2,6 +2,7 @@ import Rating from '../Rating';
 import { useParams } from 'react-router-dom';
 // import datas from '../../Data';
 import './Productinfo.css'
+// import { useDispatch } from 'react-redux'
 // import ProductItem from '../ProductItem';
 // import { Link } from 'react-router-dom';
 import { useState, useEffect} from 'react'

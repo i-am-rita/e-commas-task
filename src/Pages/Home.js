@@ -1,5 +1,5 @@
 import Addidas from '../components/Addidasmen/Addidas';
-import Grid from '../components/Grid/Container2';
+import Grid from '../components/Homepage/Container2';
 import Hero from '../components/Hero/Hero';
 import Services from '../components/Services/Services';
 import Latest from '../components/Latest/Latest'
@@ -11,7 +11,7 @@ export default function Home() {
         <div>
      <Hero />
      <Grid />
-     <Addidas/>
+     {/* <Addidas/> */}
      <Services />
      <Latest />
      <Featured />

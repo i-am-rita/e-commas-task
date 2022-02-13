@@ -3,14 +3,11 @@ import { useState, useEffect } from 'react'
 import './Productgrid.css'
 import ProductItem from '../ProductItem';
 import { Link } from 'react-router-dom';
-// import data from '../../Data';
-// import { useParams } from 'react-router-dom';
 
-// import reactshoe from '../../images/reactshoe.png'
+// import { connect } from 'react-redux';
 
 
-
-export default function Productgrid() {
+ export default function Productgrid() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
 
@@ -29,6 +26,8 @@ export default function Productgrid() {
     if (loading) {
         return 'Loading...'
     }
+
+
     return <>
 
         <div className='product-container'>
@@ -49,5 +48,13 @@ export default function Productgrid() {
         </div>
     </>;
 }
+
+
+// const mapStateToProps = (state) => {
+//     return{
+//         products: state.shop.products,
+// }
+// }
+// export default connect(mapStateToProps)(Productgrid) 
 
 // code for dynamic routing
