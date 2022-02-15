@@ -1,15 +1,14 @@
 export const addToCart = (item, cartItems) => {
     const itemExist = cartItems.some(prod => prod.id === item.id)
-    console.log(item)
-    console.log(cartItems)
+    // console.log(item)
+    // console.log(cartItems)
     if (itemExist) {
         const newCart = cartItems.map(prod => {
-            console.log(prod.id)
-            console.log(item.id)
+            // console.log(prod.id)
+            // console.log(item.id)
             return prod.id === item.id ? { ...prod, qty: prod.qty + 1 } : prod
         })
-        console.log("newcart", newCart)
-        // return  newCart
+        return  newCart
     }
 
     return  [...cartItems, {...item, qty: +1}]
@@ -24,7 +23,10 @@ export const removeFromCart = (item, cartItems) =>{
         })
         return newCart
     }
-    return [...cartItems, {...item, qty: -1}]
+    const remove = cartItems.filter(prod => {
+        return prod.id !== item.id 
+    })
+    return remove
 }
 
 // export const AddExistingItemToCart = ((cartItems, itemToAdd) => {

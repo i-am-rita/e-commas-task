@@ -2,34 +2,15 @@
 import './Cart.css';
 // import brownbag from '../../images/brown-bag.png'
 import { useSelector, useDispatch} from 'react-redux'
-// import { increaseQuantity } from '../../reduxx/Shopping/shopping-actions';
 import {  addToCart } from '../../reduxx/Shopping/shopping-actions';
 import { removeFromCart } from '../../reduxx/Shopping/shopping-actions';
-// import { addToCart } from '../reduxx/Shopping/shopping-actions';
-// import { useState } from 'react';
-// import Modaal from './MyModaal'
-// import { useState } from 'react';
+
 
 export default function Cart({props} ) {
     const cartItems = useSelector(state => state.shop.cart)
     // const [state, setState] = useState(0)
     const dispatch = useDispatch()
-    // const [openModal, setOpenModal] = useState(false)
-    // const [show, setShow] = useState
-    // const [cartItems, setCartItems] = useState([])
-    // console.log(cartItems);
-// let itemQty = document.getElement'item.qty'
-// if (clicks === 0){
-//  IncrementItem=()=>{
-//     this.setState({ clicks: this.state.clicks + 1 });
-//   }
-// }
-    // let prod = 0
-    // function increment() {
-    //     prod = prod + 1
 
-    //     console.log(prod)
-    // }
     return <>
 
         <button className='buttondeal'>
@@ -51,7 +32,7 @@ export default function Cart({props} ) {
             return(
                 <>
                 <div className='b'>
-                <i class="fas fa-star"></i>
+                <i class="fas fa-close" onClick={() => dispatch(removeFromCart(item))}></i>
                 <img src={item.image} alt='' />
                 <p>{item.title}</p>
                
@@ -62,22 +43,19 @@ export default function Cart({props} ) {
                 <div className="add_remove">
                   <div
                     className="minus_button"
-                    onClick={() => dispatch(removeFromCart(cartItems))}
+                    onClick={() => dispatch(removeFromCart(item))}
                   >
                     -
                   </div>
                   <span>{item.qty}</span>
                   <div
                     className="add_button"
-                    // onClick={this.IncrementItem}
-                    // onClick={() => increaseItem(item)}
-                    onClick={() => dispatch(addToCart(cartItems))}
+                    onClick={() => dispatch(addToCart(item))}
                   >
                     +
                   </div>
                 </div>
-                <p>${item.price}</p>
-                {/* <p>${item.price}</p> */}
+                <p>${item.price}</p>           
             </div>
             </>
             )
@@ -90,9 +68,6 @@ export default function Cart({props} ) {
             <div className='voucher-button'>
                 <input type='search' placeholder='Voucher Code' />
                 <button
-                // onClick={()=>{
-                //     setOpenModal(true)
-                // }}
                 >Redeem</button>
             </div>
 
