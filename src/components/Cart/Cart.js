@@ -1,18 +1,18 @@
-
 import './Cart.css';
-// import brownbag from '../../images/brown-bag.png'
 import { useSelector, useDispatch} from 'react-redux'
 import {  addToCart } from '../../reduxx/Shopping/shopping-actions';
 import { removeFromCart } from '../../reduxx/Shopping/shopping-actions';
+import MyModaal from '../Modaal-1/Modaal';
+import { useState } from 'react';
 
-
-export default function Cart({props} ) {
+export default function Cart() {
     const cartItems = useSelector(state => state.shop.cart)
-    // const [state, setState] = useState(0)
     const dispatch = useDispatch()
+    const [openModal, setOpenModal] = useState(false)
+    // const [singleItem, setSingleItem] = useState(false)
 
-    return <>
-
+    return (
+    <>
         <button className='buttondeal'>
             <p><span>Home</span> / Hot Deal </p>
         </button>
@@ -61,13 +61,12 @@ export default function Cart({props} ) {
             )
         })}
         </div>
-
-        <hr className='hr' />
+        
         <hr className='hr' />
         <div className='checkout-item'>
             <div className='voucher-button'>
                 <input type='search' placeholder='Voucher Code' />
-                <button
+                <button 
                 >Redeem</button>
             </div>
 
@@ -90,11 +89,18 @@ export default function Cart({props} ) {
                     <h1>Total</h1>
                     <h1>$118</h1>
                 </div>
-                <button className='redeem-button'>Redeem</button>
+                <button className='redeem-button'
+                onClick={() => setOpenModal(true)
+                // setSingleItem(cartItems)
+                }
+                >
+                Redeem</button>
                 {/* </div> */}
             </div>
         </div>
-        {/* <Modaal open={openModal}/> */}
-    </>
-
+        <div> 
+        <MyModaal open={openModal} close={setOpenModal} />
+        </div>
+       </>
+    )
     }

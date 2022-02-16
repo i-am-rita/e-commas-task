@@ -1,9 +1,16 @@
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
     background-color: #ffffff;
+    position: sticky;
     /* color: #E5E5E5; */
   }
   

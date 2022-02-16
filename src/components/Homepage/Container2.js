@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 // import ReactStars from 'react-rating-stars-component'
 // import { Link } from 'react-router-dom'
 // import data from '../../Data';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { BallTriangle } from 'react-loader-spinner'
 import './Container2.css'
 import ProductItem from '../ProductItem'
 import { useDispatch, useSelector } from 'react-redux'
-import {  showAllProducts } from '../../reduxx/Shopping/shopping-actions'
+import { showAllProducts } from '../../reduxx/Shopping/shopping-actions'
 
 
 export default function Grid() {
@@ -31,10 +33,14 @@ export default function Grid() {
 
     useEffect(() => {
         getData()
-    },[])
+    }, [])
 
     if (loading) {
-        return 'Loading...'
+        return (
+            <div className='spinner'>
+                <BallTriangle color="#00BFFF" height={80} width={80} />
+            </div>
+        )
     }
 
     return (
@@ -51,7 +57,7 @@ export default function Grid() {
                     </ul>
                 </div>
                 <div className="container">
-                {/* <Link to={`products/${id}`}> */}
+                    {/* <Link to={`products/${id}`}> */}
                     {products.map((item, i) => {
                         return (
 

@@ -5,7 +5,7 @@ import './Navbar.css'
 export default function Navbar() {
     // const [itemIndex, setItemIndex] = useState(0)
     return (
-        <div>
+        <div className='navbar'>
            <nav>
                <h4 className='dropd'>EN <i class="fas fa-sort-down"></i></h4>
                <h4 className='drop'>USD <i class="fas fa-sort-down"></i></h4>
@@ -21,7 +21,7 @@ export default function Navbar() {
              </ul>
             </nav>
             <nav>
-            <img src={LogoImg} alt='log' className='image' width='100px'/>                
+            <Link to='/'><img src={LogoImg} alt='logo' className='image' width='100px'/>     </Link>           
                 <ul className='nav-links'> 
                     <Link to='/'>Home</Link>
                     <Link to='/products'>Products</Link>

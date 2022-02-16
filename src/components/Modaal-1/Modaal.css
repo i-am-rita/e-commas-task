@@ -1,0 +1,154 @@
+.ReactModal__Content.ReactModal__Content--after-open{
+    width: auto;
+    color: black;
+    height: 80%;
+    background-color: blueviolet;
+    margin: 50px 250px 10px 250px;
+}
+
+/* .modalStyles{
+    margin-top: -5px;
+} */
+
+.return-button{
+    display: flex;
+    margin-left: 35px;
+    color: #40BFFF;
+    font-size: 22.22px;
+}
+
+.modalStyles .cancel-button{
+    display: flex;
+    justify-content: flex-end;
+    color: #40BFFF;
+    margin-right: 50px;
+    font-size: 30px;
+}
+
+.make-payment h2{
+    position: relative;
+    align-items: center;
+    text-align: center;
+   top: -50.24px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    text-transform: capitalize;
+    color: #40BFFF;
+}
+
+.make-payment .image{
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -80px;
+}
+
+.modalContainer{
+    margin-top: -100px;
+    padding: 0px 40px 0px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+/* .left-grid{
+      border: 2px solid red;
+  } */
+.input-button input{
+    padding: 20px;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+    background-color: #DFDEDE;
+    opacity: 0.7;
+    border-radius: 10px;
+    border: none;
+}
+
+.input-button .message-area{
+    padding: 40px;
+    background-color: #DFDEDE;
+    width: 100%;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.select-cards p{
+    color: #40BFFF;
+    margin: 0;
+    padding: 0;
+    /* margin-bottom: 30px; */
+    /* padding-bottom: -70px; */
+    /* margin-top: -9px; */
+    /* background-color: red;  */
+} 
+
+
+.credit-card span{
+    background-color: red;
+}
+
+.credit-card button{
+    padding-top: 40px;
+    /* color: red; */
+    border: 2px solid #ffffff;
+    padding: 7px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+
+.select-cards .fa-credit-card{
+    font-size: 20px;
+margin-right: -9px;
+color: #40BFFF;
+
+}
+
+
+.credit-card button p{
+    text-align: start;
+   margin-right: 90px;
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 150%;
+letter-spacing: 0.5px;
+color: #223263;
+width: 135.33px;
+}
+
+.select-cards .fa-square-check{
+    font-size: 30px;
+    color: #DFDEDE;
+}
+
+.payment-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 30px; */
+    /* text-align: center; */
+}
+
+.payment-button button{
+    margin: 4px;
+    padding: 10px;
+    width: 40%;
+    background: #33A0FF;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 33px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}

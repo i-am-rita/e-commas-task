@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import './Productgrid.css'
 import ProductItem from '../ProductItem';
 import { Link } from 'react-router-dom';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { BallTriangle } from 'react-loader-spinner'
 
 // import { connect } from 'react-redux';
 
@@ -24,8 +26,13 @@ import { Link } from 'react-router-dom';
         getData()
     }, [])
     if (loading) {
-        return 'Loading...'
+        return (
+            <div className='spinner'>
+                <BallTriangle color="#00BFFF" height={80} width={80} />
+            </div>
+        )
     }
+
 
 
     return <>

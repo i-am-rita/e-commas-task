@@ -1,4 +1,4 @@
-import Addidas from '../components/Addidasmen/Addidas';
+// import Addidas from '../components/Addidasmen/Addidas';
 import Grid from '../components/Homepage/Container2';
 import Hero from '../components/Hero/Hero';
 import Services from '../components/Services/Services';

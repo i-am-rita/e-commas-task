@@ -21,7 +21,7 @@ export default function Contactpage() {
       </div>
       </div>
       <div class="enter-details">
-  <form action="action_page.php">
+  {/* <form action="action_page.php"> */}
 
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
@@ -33,7 +33,7 @@ export default function Contactpage() {
     <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
 
     <input type="submit" value="Submit"/>
-  </form>
+  {/* </form> */}
   </div>
 </div>
 
