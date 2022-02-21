@@ -1,12 +1,8 @@
 import React from 'react';
-// import { Link } from 'react-router-dom'
-// import ReactStars from 'react-rating-stars-component'
 import Rating from './Rating';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../reduxx/Shopping/shopping-actions';
-// import { removeFromCart } from '../reduxx/Shopping/shopping-actions'
-const ProductItem = ({ item, i, show, setShow }) => {
-    // const products = useSelector((state) => state)
+import { addToCart, addFavorites } from '../reduxx/Shopping/shopping-actions';
+const ProductItem = ({ item, i, show, setShow, isFav }) => {
     const dispatch = useDispatch()
 
     return (
@@ -14,16 +10,24 @@ const ProductItem = ({ item, i, show, setShow }) => {
             <div className='items' key={item.img}
                 onMouseEnter={() => setShow(i)}
                 onMouseLeave={() => setShow('')}
+                // onClick={() => console.log(isFav)}
             >
-                {show === i && <div className='image' >
+                {show === i && <div className='image'>
                     <div className='image-overlay'>
                         <h1 className='image-description'>
-                            <i class="far fa-heart"></i>
+                            {isFav ? (<i class="fa fa-heart" onClick={() => {
+                            // e.stopPropagation()
+                            dispatch(addFavorites(item))}
+                            }></i>
+                            ) : <i class="far fa-heart" onClick={() => {
+                            // e.stopPropagation()
+                            dispatch(addFavorites(item))}
+                            }></i>
+                            }
 
                             <i class="fas fa-shopping-cart" onClick={() =>
                                 dispatch(addToCart(item))
                             }></i>
-
                         </h1>
                     </div>
                 </div>}

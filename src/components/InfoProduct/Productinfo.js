@@ -1,11 +1,7 @@
 import Rating from '../Rating';
 import { useParams } from 'react-router-dom';
-// import datas from '../../Data';
 import './Productinfo.css'
-// import { useDispatch } from 'react-redux'
-// import ProductItem from '../ProductItem';
-// import { Link } from 'react-router-dom';
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 
 export default function Productinfo(item) {
@@ -27,21 +23,17 @@ export default function Productinfo(item) {
         getData()
     }, [])
 
-    if (loading){
+    if (loading) {
         return 'Loading din din...........'
     }
-    // search data using .find to display the data of a different items
-    // let item = datas.find(item => item.id === parseInt(id))
 
     return <>
         <button className='buttondeal'>
             <p><span>Home</span> / Hot Deal / {data.title}</p>
         </button>
-            <div className='conthainer'>
+        <div className='conthainer'>
             <div className='image-section'>
-                
-                    <img src={data.image} className='main-image' alt='' />
-                
+                <img src={data.image} className='main-image' alt='' />
                 <div className='side-image' >
                     <img src={data.image} alt='' />
                     <img src={data.image} alt='' />
@@ -53,7 +45,7 @@ export default function Productinfo(item) {
             <div className='detail-section'>
                 <h1>{data.title}</h1>
                 <div className='review'>
-                <Rating number={Math.round(data?.rating?.rate)} className='stars' />
+                    <Rating number={Math.round(data?.rating?.rate)} className='stars' />
                     <p className='odd'>0 reviews</p>
                     <p className='even'>Submit a review</p>
                 </div>
@@ -61,31 +53,30 @@ export default function Productinfo(item) {
                 <hr className='hr' />
                 <div className='blue'>
                     <p>{data.price}</p>
-                    </div>
-                    <div className='available'>
+                </div>
+                <div className='available'>
                     <div>
-                    <p>Availability:</p>
-                    <p>In stock</p>
+                        <p>Availability:</p>
+                        <p>In stock</p>
                     </div>
-                    
+
                     <div>
-                    <p>Category:</p>
-                    <p>Accessories</p>
+                        <p>Category:</p>
+                        <p>Accessories</p>
                     </div>
                     <div>
-                    <p>Free shipping</p>
+                        <p>Free shipping</p>
                     </div>
-                    </div>
+                </div>
                 <hr className='hr' />
                 <p>Select Color: </p>
                 <p>Size</p>
                 <hr className='hr' />
                 <div className='social-links'>
                     <button>- 2 +</button>
-                    {/* <button onClick={handleAddProduct}>Add to Cart</button> */}
                 </div>
-                      
-           
+
+
                 <hr className='hr' />
                 <div className='social-links'>
                     <button>kjhuyvuyvfuvfugvgf</button>
@@ -97,10 +88,10 @@ export default function Productinfo(item) {
                 <img src={data.image} className='main-image' alt='' />
                 <Rating number={Math.round(data?.rating?.rate)} />
                 <p>{data.price}</p>
-                
+
             </div>
         </div>
-     
+
 
 
         <div className='product-inform'>
@@ -124,8 +115,8 @@ export default function Productinfo(item) {
             </p>
         </div>
         <div className='product-cont'>
-        <h1>Related Products</h1>
-        {/* <div className='product-contahiner'>
+            <h1>Related Products</h1>
+            {/* <div className='product-contahiner'>
             {datas.slice(0, 4).map((item, i, id) => {
                 // data.slice(1, 4 )
                 return (

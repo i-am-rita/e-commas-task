@@ -6,13 +6,14 @@
 
 }
 
-/* .image-section{ */
-    /* display: flex; */
+.conthainer .image-section{
+    width: 200px;
+    /* display: flex;  */
     /* flex: 2; */
-    /* background-color: green; */
-    /* margin: -40px 50px; */
-   
-/* } */
+    background-color: gray;
+    /* margin: -40px 50px;
+    */
+ }
 
  .main-image{
     display: flex;
@@ -21,10 +22,10 @@
     /* margin-bottom: -100px; */
 }
 
-.image-section .side-image{
+.conthainer .side-image{
     display: flex;
     /* background-color: blue; */
-    width: 80px;
+    width: 70px;
     /* margin: 0px 40px; */
     margin-top: 90px;
     /* justify-content: space-between; */

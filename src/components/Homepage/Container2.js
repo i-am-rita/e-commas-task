@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import ReactStars from 'react-rating-stars-component'
-// import { Link } from 'react-router-dom'
-// import data from '../../Data';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { BallTriangle } from 'react-loader-spinner'
 import './Container2.css'
@@ -13,19 +10,16 @@ import { showAllProducts } from '../../reduxx/Shopping/shopping-actions'
 export default function Grid() {
     const [show, setShow] = useState('')
     const [loading, setLoading] = useState(false)
-    // const dispatch = useDispatch()
-    // const products = useSelector(state => state.shop.products)
-
     const dispatch = useDispatch()
     const products = useSelector(state => state.shop.products)
-    // const {id} = products
+    const favorite = useSelector(state => state.shop.favorite)
+
     function getData() {
         setLoading(true)
         fetch('https://fakestoreapi.com/products/')
             .then((res) => res.json())
             .then(data => {
                 dispatch(showAllProducts(data))
-                // dispatch(addAllProducts(data))
             })
             .catch((err) => console.log('error'))
             .finally(() => setLoading(false))
@@ -35,6 +29,7 @@ export default function Grid() {
         getData()
     }, [])
 
+    // console.log(favorite)
     if (loading) {
         return (
             <div className='spinner'>
@@ -42,7 +37,6 @@ export default function Grid() {
             </div>
         )
     }
-
     return (
         <>
             <div className='detail'>
@@ -59,14 +53,16 @@ export default function Grid() {
                 <div className="container">
                     {/* <Link to={`products/${id}`}> */}
                     {products.map((item, i) => {
+                        const isFav = favorite?.some(fave =>
+                            fave.id === item.id)
                         return (
-
                             <ProductItem
                                 item={item}
                                 i={i}
                                 show={show}
                                 setShow={setShow}
                                 key={item.id}
+                                isFav={isFav}
                             />
 
                         )

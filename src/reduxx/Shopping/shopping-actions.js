@@ -21,28 +21,12 @@ export const increaseQuantity = (itemID) => {
         payload: itemID
     }
 }
-// export const IncreaseItemCountInCartAction = itemID => {
-//     return{
-//         type: actionTypes.INCREASE_ITEM_COUNT_IN_CART_ACTION,
-//         payload: itemID
-//     }
-// }
-
-// export const productInfo = (payload) => {
-//     return {
-//         type: actionTypes.PRODUCT_INFO,
-//         payload: payload,
-//     }
-// }
-// export const adjustQty = (itemID, value) => {
-//     return {
-//         type: actionTypes.ADJUST_QTY,
-//         payload: {
-//             id: itemID,
-//             qty: value,
-//         }
-//     }
-// }
+export const clearCart = (itemID) => {
+    return {
+        type: actionTypes.CLEAR_CART,
+        payload: itemID
+    }
+}
 
 export const addAllProducts = (payload) => {
     return{
@@ -58,3 +42,9 @@ export const showAllProducts = (payload) => {
     }
 }
 
+export const addFavorites = (item) => {
+    return{
+        type: actionTypes.ADD_FAVORITES,
+        payload: item,
+    }
+}
