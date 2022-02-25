@@ -10,7 +10,7 @@
     width: 200px;
     /* display: flex;  */
     /* flex: 2; */
-    background-color: gray;
+    /* background-color: gray; */
     /* margin: -40px 50px;
     */
  }
@@ -79,14 +79,14 @@ line-height: 19px;
 
 color: #33A0FF;
 }
-.hr{
+/* .hr{
     background-color: #F6F7F8;    
     margin-left: -2px;
     height: 2.12px;
     width: 95%;
     position: relative;
     top: -20px;
-}
+} */
 
 .detail-section .blue{
 display: flex;

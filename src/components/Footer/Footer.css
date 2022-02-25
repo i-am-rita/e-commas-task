@@ -55,20 +55,21 @@
     background-color: #BCDDFE;
 }
 
-.hr hr{
+ .hr hr{
     margin: 80px 80px ;
     margin-left: 130px;
-    color: white;
+    color: #F6F7F8;
+    /* width: 100%; */
     /* padding: -30px; */
 }
 .foot{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0px 110px;
+    padding: 0px 100px;
     position: relative;
     top: -55px;
-    bottom: 20px;
+    /* bottom: 20px; */
     /* background-color: #BCDDFE; */
 }
 

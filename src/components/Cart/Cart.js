@@ -1,14 +1,18 @@
+import React from 'react';
 import './Cart.css';
+
 import { useSelector, useDispatch} from 'react-redux'
 import {  addToCart } from '../../reduxx/Shopping/shopping-actions';
 import { removeFromCart, clearCart } from '../../reduxx/Shopping/shopping-actions';
 import MyModaal from '../Modaal-1/Modaal';
+// import Modals from '../Modal/Modal';
 import { useState } from 'react';
 
 export default function Cart() {
     let cartItems = useSelector(state => state.shop.cart)
     const dispatch = useDispatch()
     const [openModal, setOpenModal] = useState(false)
+
     return (
     <>
         <button className='buttondeal'>
@@ -21,7 +25,7 @@ export default function Cart() {
             <p>Qty</p>
             <p>Unit Price</p>
         </div>
-        <hr className='hr' />
+        <hr className='line' />
 
        
 
@@ -58,13 +62,13 @@ export default function Cart() {
         })}
         </div>
         
-        <hr className='hr' />
+        <hr className='line' />
         <div className='checkout-item'>
-            {/* <div className='voucher-button'>
+            <div className='voucher-button'>
                 <input type='search' placeholder='Voucher Code' />
                 <button 
                 >Redeem</button>
-            </div> */}
+            </div>
             <div className='checking'>
                 <div>
                     <p>Subtotal</p>
@@ -87,12 +91,16 @@ export default function Cart() {
                 onClick={() => setOpenModal(true)
                 // setSingleItem(cartItems)
                 }
+                // onClick={handleNextStep}
                 >
                 Redeem</button>
                 {/* </div> */}
             </div>
         </div>
         <div> 
+        {/* <Modal isOpen={true}>
+        <p>{isStep}</p>
+        </Modal> */}
         <MyModaal open={openModal} close={setOpenModal} />
         </div>
        </>

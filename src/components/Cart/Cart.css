@@ -22,11 +22,11 @@
     align-items: flex-start;
 }
 
-.hr{
+.line{
   /* border: 1px solid red; */
   margin: 15px 50px;
-  width: 90% !important;
-  color: #F6F7F8 !important;
+  /* width: 90% !important; */
+  color: #F6F7F8;
 }
 
 .first-item{

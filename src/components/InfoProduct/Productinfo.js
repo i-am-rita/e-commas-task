@@ -50,7 +50,7 @@ export default function Productinfo(item) {
                     <p className='even'>Submit a review</p>
                 </div>
 
-                <hr className='hr' />
+                {/* <hr className='hr' /> */}
                 <div className='blue'>
                     <p>{data.price}</p>
                 </div>
@@ -68,16 +68,16 @@ export default function Productinfo(item) {
                         <p>Free shipping</p>
                     </div>
                 </div>
-                <hr className='hr' />
+                {/* <hr className='hr' /> */}
                 <p>Select Color: </p>
                 <p>Size</p>
-                <hr className='hr' />
+                {/* <hr className='hr' /> */}
                 <div className='social-links'>
                     <button>- 2 +</button>
                 </div>
 
 
-                <hr className='hr' />
+                {/* <hr className='hr' /> */}
                 <div className='social-links'>
                     <button>kjhuyvuyvfuvfugvgf</button>
                     <button>kjhuyvuyvfuvfugvgf</button>

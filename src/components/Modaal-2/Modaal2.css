@@ -1,0 +1,148 @@
+.creditcard{
+    margin-top: -35px;
+    width: 339px;
+}
+
+.creditcard .subtract{
+    position:relative;
+    top: -180px;
+    left: 30px;
+    width: 42px;
+    height: 30px;
+    align-items: flex-start;
+    text-align: start;
+}
+
+.creditcard .visa-logo{
+    position:relative;
+    top: -188px;
+    left: 200px;
+    width: 75.8px;
+    height: 24.8px;
+    align-items: flex-start;
+    text-align: start;
+}
+
+.creditcard .card-number{
+    position:relative;
+    top: -175px;
+    left: 30px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+    /* background: chocolate; */
+}
+
+.creditcard .card-name{
+    /* background: chocolate; */
+    position:relative;
+    top: -170px;
+    left: 30px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+.creditcard .card-cvv{
+    position:relative;
+    top: -222px;
+    left: 250px;
+    width: 75.8px;
+    height: 24.8px;
+    align-items: flex-start;
+    text-align: start;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+.credit-left {
+    margin-top: -50px;
+}
+
+.credit-left .card-numb{
+    padding: 10px;
+}
+
+.card-numb input{
+    padding: 10px;
+    width: 336px;
+    height: 50px;
+    background: #DFDEDE;
+    color: #999999;
+    border:none;
+    border-radius: 10px;
+    /* margin: 30px; */
+}
+
+.credit-left button{
+    width: 161px;
+    height: 50px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #DFDEDE;
+    color: #999999;
+    margin: 2px;
+    text-align: start;
+}
+
+.credit-left .fa-square-check{
+    font-size: 30px;
+    color: #DFDEDE;
+}
+
+
+.credit-left h5{
+   font-size: 14px; 
+   color: #999999;
+   display: flex;
+   align-items: center;
+   margin: -15px 20px 10px 20px; 
+   /* text-align: center; */
+}
+
+.confirm-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+    overflow: hidden;
+}
+
+.confirm-button button{
+    /* margin-top: -260px; */
+
+    padding: 10px;
+    width: 40%;
+    background: #33A0FF;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 33px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
