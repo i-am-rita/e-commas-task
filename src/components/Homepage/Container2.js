@@ -27,7 +27,7 @@ export default function Grid() {
 
     useEffect(() => {
         getData()
-    }, [''])
+    }, [])
 
     // console.log(favorite)
     if (loading) {
@@ -64,7 +64,6 @@ export default function Grid() {
                                 key={item.id}
                                 isFav={isFav}
                             />
-
                         )
                     })}
                     {/* </Link> */}

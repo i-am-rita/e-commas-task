@@ -1,27 +1,18 @@
-import React from 'react';
-// import Modal from 'react-modal';
-import './Modaal.css'
+import React from 'react'
+import '../Redeem/StepOne.css'
 import stepper from '../../images/Stepper.png'
-import Modaal2 from '../Modaal-2/Modaal2';
-import Modals from '../Modal/Modal';
-import Cart from '../Cart/Cart';
-
-export default function Modaal({props}) {
-  // const [openModal, setOpenModal] = useState(false)
-  const modalStyle = {
-    overlay: {
-      border: 'none',
-      backgroundColor: '#2222224D',
-    }
-  }
-  //   if(!props.rita) {
-  //     return  ''
-  // }
-  return <>
-    <Modals style={modalStyle}>
-      <div className='modalStyles'>
-        <i class="fa-solid fa-arrow-left return-button" onClick={() => props.close(false)}></i>
-        <i class="fas fa-close cancel-button" onClick={props.handleCloseModal}></i>
+const StepOne = ({ handleNext, handleFormer, handleBackStep1}) => {
+    const modalStyle = {
+        overlay: {
+          border: 'none',
+          backgroundColor: '#2222224D',
+        }
+      }
+    return (
+        <>
+            <div className='modalStyles' style={modalStyle}>
+        <i class="fa-solid fa-arrow-left return-button" onClick={() => handleBackStep1()} ></i>
+        <i class="fas fa-close cancel-button" onClick={handleFormer}></i>
         <div className='make-payment'>
           <h2>Make Payment</h2>
           <img src={stepper} alt='' className='image' />
@@ -67,9 +58,9 @@ export default function Modaal({props}) {
         </div>
       </div>
       <div className='payment-button'>
-        <button onClick={props.handleNext}>Go to Payment</button>
+        <button onClick={handleNext}>Go to Payment</button>
       </div>
-      <Modaal2 open={props.handleOpenModal} close={props.handleCloseModal} />
-    </Modals>
-  </>;
+        </>
+    )
 }
+export default StepOne;

@@ -107,6 +107,8 @@ h2 a{
     }
 
     .item h3{
+        color: red;
+        /* width: 219.33px; */
         text-decoration: none;
     }
     .image{

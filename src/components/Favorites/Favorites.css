@@ -29,8 +29,8 @@
     align-items: center;
     text-align: center;
     overflow : hidden;
-    /* width: 219.33px; */
-    /* padding: 0px 20px; */
-    /* white-space: nowrap; */
-    /* text-overflow: ellipsis; */
+    width: 219.33px; 
+    padding: 0px 20px;
+    /* white-space: nowrap;
+    text-overflow: ellipsis; */
 }
