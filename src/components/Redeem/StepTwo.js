@@ -6,7 +6,7 @@ import stepper1 from '../../images/Stepper1.png'
 import creditcard from '../../images/Rectangle.png'
 import Subtract from '../../images/Subtract.png'
 import visalogo from '../../images/visa-logo.png'
-import { clearCart } from '../../reduxx/Shopping/shopping-actions'
+// import { clearCart } from '../../reduxx/Shopping/shopping-actions'
 import { useDispatch } from 'react-redux'
 
 const Step2 = ({ handleNext, handleFormer, handleBackStep}) => {

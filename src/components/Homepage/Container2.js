@@ -27,7 +27,7 @@ export default function Grid() {
 
     useEffect(() => {
         getData()
-    }, [])
+    },)
 
     // console.log(favorite)
     if (loading) {
