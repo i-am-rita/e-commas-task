@@ -21,7 +21,6 @@ console.log(cartItems)
     const handleNext = () => {
         setStepper(stepper + 1)
     }
-
     const handleFormer = () => {
       setOpenModal(false)
     }
@@ -33,7 +32,6 @@ console.log(cartItems)
         setStepper(1)
         navigate('/')
     }
-
     const handleBackStep = () => {
        return setStepper((prev) => prev - 1)
     }
